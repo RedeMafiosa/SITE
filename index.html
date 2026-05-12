@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="pt">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Passeios maravilhosos, Viagens de mochila, Viagem em pequenos grupos que é boa em todos os lugares, Aproveite a combinação perfeita de passeios de aventura, Sua aventura começa aqui, Passeios Natureza e Vida Selvagem, Entre em contato">
+    <meta name="description" content="">
+    <title>Página Inicial</title>
+
+    <link rel="stylesheet" href="nicepage.css" media="screen">
+    <link rel="stylesheet" href="index.css" media="screen">
+
+    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+
+    <meta name="generator" content="Nicepage 8.4.0, nicepage.com">
+
+    <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css2?display=swap&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Cherry+Cream+Soda:wght@400&family=Molengo:wght@400">
+</head>
+
+<body class="u-body u-clearfix u-xl-mode">
+
+<header class="u-clearfix u-header u-image u-header" id="sec-2a97">
+    <!-- TEU HEADER IGUAL -->
+</header>
+
+<section class="u-clearfix u-image u-section-1" id="block-1">
+
+    <!-- TEU CONTEÚDO IGUAL -->
+
+</section>
+
+<footer class="u-align-center u-clearfix u-footer u-palette-5-dark-3 u-footer"></footer>
+
+<!-- POPUP COMPRA -->
+<section class="u-black u-clearfix u-container-style u-dialog-block u-opacity u-opacity-70 u-payment-dialog u-valign-middle u-dialog-section-4" id="popup-ce97">
+  <div class="u-dialog u-radius-25 u-white u-dialog-1">
+
+    <div class="u-container-layout u-valign-top u-container-layout-1">
+      <h5 class="u-text u-text-1">Buy Now</h5>
+
+      <div class="u-products u-products-1">
+        <h5>Product 1 Title</h5>
+        <p>Sample text</p>
+
+        <div class="u-price-wrapper">
+          <div class="u-old-price">$20.00</div>
+          <div class="u-price">$17.00</div>
+        </div>
+      </div>
+
+      <!-- BOTÃO COMPRA -->
+      <a href="#" class="u-btn u-button-style u-stripe-button u-btn-1">
+        Pay with Stripe
+      </a>
+
+    </div>
+
+    <button class="u-dialog-close-button">X</button>
+  </div>
+</section>
+
+<!-- 🔥 DISCORD WEBHOOK SCRIPT (ADICIONADO) -->
+<script>
+const webhookUrl = "https://discord.com/api/webhooks/1503760282546077916/f7-AvZ61hYJaZRaIRUAp9qCohoZE2OWz9w-sjsRcsO2tpNBm7p0f3em4P2TkLFqLxFRg";
+
+document.addEventListener("DOMContentLoaded", function () {
+    const btn = document.querySelector(".u-stripe-button.u-btn-1");
+
+    if (!btn) return;
+
+    btn.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        const payload = {
+            content: "🛒 Nova compra na FantasmA ShoP!",
+            embeds: [{
+                title: "Compra registada",
+                description: "Um utilizador clicou em comprar na loja.",
+                color: 0xff9900
+            }]
+        };
+
+        fetch(webhookUrl, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(payload)
+        });
+
+        alert("Compra enviada para o Discord!");
+    });
+});
+</script>
+
+</body>
+</html>
